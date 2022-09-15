@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var xmlhttp;
+    if (window.XMLHttpRequest)
+    {
+        //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+        xmlhttp=new XMLHttpRequest();
+    }
+    else
+    {
+        // IE6, IE5 浏览器执行代码
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    xmlhttp.open("GET","http://localhost:8080/demo1/ajaxServlet",true);
+    xmlhttp.send();
+
+    xmlhttp.onreadystatechange=function()
+    {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+        {
+            alert(xmlhttp.responseText);
+        }
+    }
+</script>
+
+</body>
+</html>
