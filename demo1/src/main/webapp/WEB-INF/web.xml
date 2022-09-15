@@ -4,13 +4,21 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
          version="5.0">
 
-
-    <servlet>
-        <servlet-name>hello</servlet-name>
-        <servlet-class>com.javalearning.item.web.ItemServlet01</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/ItemServlet01</url-pattern>
-    </servlet-mapping>
+<!--servlet3.0后可以用注释-->
+<!--    <servlet>-->
+<!--        <servlet-name>hello</servlet-name>-->
+<!--        <servlet-class>com.javalearning.item.web.ItemServlet01</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>hello</servlet-name>-->
+<!--        <url-pattern>/ItemServlet01</url-pattern>-->
+<!--    </servlet-mapping>-->
+<!--    <servlet>-->
+<!--        <servlet-name>ajax</servlet-name>-->
+<!--        <servlet-class>com.learn.AjaxServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ajax</servlet-name>-->
+<!--        <url-pattern>/ajaxServlet</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>
