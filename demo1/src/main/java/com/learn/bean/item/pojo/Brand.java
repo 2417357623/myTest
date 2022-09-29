@@ -1,4 +1,4 @@
-package com.javalearning.item.pojo;
+package com.learn.bean.item.pojo;
 
 public class Brand {
     private Integer id;

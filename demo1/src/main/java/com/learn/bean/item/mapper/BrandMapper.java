@@ -1,6 +1,6 @@
-package com.javalearning.item.mapper;
+package com.learn.bean.item.mapper;
 
-import com.javalearning.item.pojo.Brand;
+import com.learn.bean.item.pojo.Brand;
 
 import java.util.List;
 

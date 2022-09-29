@@ -32,4 +32,7 @@ public class PersonDaoImpl extends BaseDao implements PersonDao{
     public void update(Connection conn, Person person) {
 
     }
+    public void save(){
+        System.out.println(" dao save ");
+    }
 }

@@ -1,7 +1,7 @@
-package com.javalearning.item.service;
+package com.learn.bean.item.service;
 
-import com.javalearning.item.mapper.BrandMapper;
-import com.javalearning.item.pojo.Brand;
+import com.learn.bean.item.mapper.BrandMapper;
+import com.learn.bean.item.pojo.Brand;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;

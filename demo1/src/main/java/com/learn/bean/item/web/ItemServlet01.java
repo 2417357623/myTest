@@ -1,10 +1,9 @@
-package com.javalearning.item.web;
+package com.learn.bean.item.web;
 
 
-import com.javalearning.item.pojo.Brand;
-import com.javalearning.item.service.BrandService;
+import com.learn.bean.item.pojo.Brand;
+import com.learn.bean.item.service.BrandService;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebInitParam;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
