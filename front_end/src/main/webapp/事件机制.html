@@ -15,16 +15,18 @@
 </head>
 <body>
 <input type="button" value="按钮" id="btn"/><br/><br/>
+<input type="button" value="事件对象" id="event"/><br/><br/>
 <div class="one" id="one"></div>
+
 
 <script>
   //jquery对原生js事件增强，后一个绑定事件不覆盖前一个
   $('#one').click(function (){
-    alert('11');
+    alert('事件注册1');
   })
 
   $('#one').click(function (){
-    alert('111');
+    alert('事件注册2');
   })
 
   //jquery 用on统一了事件注册方式
@@ -49,6 +51,11 @@
   //trigger作用二：触发自定义事件
 
   //jquery事件对象
+  $('#event').on('click',function (e){
+      //注册一个事件，系统会帮我们生成一个对象记录事件触发时的信息，参数e来获取
+      console.log(e)
+  })
+
 
 </script>
 </body>
