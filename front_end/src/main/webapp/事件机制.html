@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test6</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+
+  <style>
+    div{
+      height:200px;
+      width:200px;
+      border: 1px solid red;
+    }
+  </style>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/><br/><br/>
+<div class="one" id="one"></div>
+
+<script>
+  //jquery对原生js事件增强，后一个绑定事件不覆盖前一个
+  $('#one').click(function (){
+    alert('11');
+  })
+
+  $('#one').click(function (){
+    alert('111');
+  })
+
+  //jquery 用on统一了事件注册方式
+  //简单注册事件
+  $('#btn').on('click',function (){
+    alert('简单on')
+  })
+
+  //委托注册
+  $('body').on('click','#btn',function (){
+    alert('委托on');
+  })
+
+  //事件解绑off()
+
+  //事件触发trigger
+  $('#btn').on('click',function (){
+    //作用一：相比于原来用鼠标click触发，现在我们用代码触发，没有直接在#one上点击
+    $('#one').trigger('click');
+  })
+
+  //trigger作用二：触发自定义事件
+
+  //jquery事件对象
+
+</script>
+</body>
+</html>

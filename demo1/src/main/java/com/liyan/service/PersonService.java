@@ -13,7 +13,7 @@ import com.liyan.dao.PersonDaoImpl;
 
 public class PersonService {
 
-    private PersonDao personDao = new PersonDaoImpl();
+    private PersonDao personDao;
 
     public void save(){
         System.out.println(" service save");
@@ -21,6 +21,8 @@ public class PersonService {
         PersonDaoImpl.save();
     }
 
-
+    public void setPersonDao(PersonDao personDao) {
+        this.personDao = personDao;
+    }
 }
 
