@@ -1,9 +1,11 @@
 package com.liyan.dao;
 
 import com.liyan.bean.Person;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 
+@Repository("PersonDao")
 public class PersonDaoImpl extends BaseDao implements PersonDao{
 
     @Override
