@@ -1,7 +1,9 @@
 package com.liyan;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import com.alibaba.druid.pool.DruidDataSource;
+import org.springframework.context.annotation.*;
+
+import javax.sql.DataSource;
 
 /**
  * @ClassName SpringConfig
@@ -12,6 +14,9 @@ import org.springframework.context.annotation.Configuration;
  **/
 @Configuration
 @ComponentScan("com.liyan")
+@PropertySource("Druid.properties")
+@Import(JdbcConfig.class)
 public class SpringConfig {
+
 }
 

@@ -2,6 +2,10 @@ package com.liyan.service;
 
 import com.liyan.dao.PersonDao;
 import com.liyan.dao.PersonDaoImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 /**
  * @ClassName PersonService
@@ -11,18 +15,23 @@ import com.liyan.dao.PersonDaoImpl;
  * @Version 1.0
  **/
 
+@Service("PersonService")
 public class PersonService {
 
+    @Autowired
+    @Qualifier("PersonDao2")
     private PersonDao personDao;
+    @Value("111")
+    private int age;
+    @Value("${url}")
+    private String url;
 
     public void save(){
         System.out.println(" service save");
-        PersonDaoImpl PersonDaoImpl = (PersonDaoImpl)personDao;
-        PersonDaoImpl.save();
+        personDao.save();
+        System.out.println(age);
+        System.out.println(url);
     }
 
-    public void setPersonDao(PersonDao personDao) {
-        this.personDao = personDao;
-    }
 }
 

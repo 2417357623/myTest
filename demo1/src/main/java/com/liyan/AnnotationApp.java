@@ -2,7 +2,10 @@ package com.liyan;
 
 import com.liyan.dao.PersonDao;
 import com.liyan.dao.PersonDaoImpl;
+import com.liyan.service.PersonService;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import javax.sql.DataSource;
 
 /**
  * @ClassName annotationApp
@@ -15,9 +18,10 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class AnnotationApp {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.class);
-        PersonDao bean = (PersonDao) ctx.getBean("PersonDao");
-        PersonDaoImpl bean1 = (PersonDaoImpl) bean;
-        bean1.save();
+        PersonService bean = (PersonService) ctx.getBean("PersonService");
+        bean.save();
+        System.out.println(bean);
+        DataSource bean1 = ctx.getBean(DataSource.class);
         System.out.println(bean1);
     }
 }

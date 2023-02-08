@@ -22,4 +22,6 @@ public interface PersonDao {
 
     void   update(Connection conn, Person person);
 
+    void save();
+
 }
