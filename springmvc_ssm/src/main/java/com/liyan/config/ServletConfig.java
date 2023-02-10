@@ -19,6 +19,7 @@ public class ServletConfig extends AbstractAnnotationConfigDispatcherServletInit
         return new Class[]{SpringMvcConfig.class};
     }
 
+    //过滤器
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }

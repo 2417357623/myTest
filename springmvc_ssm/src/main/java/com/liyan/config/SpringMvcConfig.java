@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * @Version 1.0
  **/
 @Configuration
-@ComponentScan("com.liyan.controller")
+@ComponentScan({"com.liyan.controller","com.liyan.config"})
 @EnableWebMvc
 public class SpringMvcConfig {
 

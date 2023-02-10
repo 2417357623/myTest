@@ -4,9 +4,11 @@ import com.liyan.dao.BookDao;
 import com.liyan.domain.Book;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
+@Transactional
 public interface BookService {
 
 

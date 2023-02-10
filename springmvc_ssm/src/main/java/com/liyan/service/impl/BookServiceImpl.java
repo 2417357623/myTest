@@ -1,7 +1,10 @@
 package com.liyan.service.impl;
 
+import com.liyan.controller.Code;
 import com.liyan.dao.BookDao;
 import com.liyan.domain.Book;
+import com.liyan.exception.BusinessException;
+import com.liyan.exception.SystemException;
 import com.liyan.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,6 +41,17 @@ public class BookServiceImpl implements BookService {
     }
 
     public Book getById(Integer id) {
+
+        if(id==0){
+            throw new BusinessException("输入参数有误", Code.BUSINESS_ERR);
+        }
+
+        try{
+            int i = 1/0;
+        }catch (Exception e){
+            throw new SystemException("服务器访问超时",e,Code.SYSTEM_TIMEOUT_ERR);
+        }
+
         return bookDao.getById(id);
     }
 
