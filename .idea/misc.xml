@@ -14,12 +14,12 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/pom.xml" />
         <option value="$PROJECT_DIR$/demo1/front_end/pom.xml" />
-        <option value="$PROJECT_DIR$/front_end/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/../aop/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_02/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_ssm/pom.xml" />
+        <option value="$PROJECT_DIR$/boot/pom.xml" />
+        <option value="$PROJECT_DIR$/spring_review/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
