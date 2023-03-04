@@ -8,16 +8,21 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spring_review" />
+        <module name="practice" />
         <module name="springmvc_ssm" />
-        <module name="springmvc_02" />
-        <module name="boot" />
         <module name="demo1" />
+        <module name="springmvc_02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="aop" target="1.5" />
+      <module name="boot" target="1.8" />
+      <module name="demo" target="1.8" />
       <module name="front_end" target="1.8" />
-      <module name="maven_01" target="1.8" />
       <module name="spring-mybatis" target="1.5" />
+      <module name="spring-mybatis (1) (com.example)" target="1.5" />
+      <module name="springmvc" target="1.5" />
+      <module name="springmvc_01" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
