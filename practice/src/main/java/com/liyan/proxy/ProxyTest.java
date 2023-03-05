@@ -20,5 +20,6 @@ public class ProxyTest {
         Run proxy_21 = (Run) ProxyUtil.createProxy_2(player);
         proxy_21.run();
 
+
     }
 }

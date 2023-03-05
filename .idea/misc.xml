@@ -5,6 +5,8 @@
     <file type="web" url="file://$PROJECT_DIR$/demo" />
     <file type="web" url="file://$PROJECT_DIR$/demo1" />
     <file type="web" url="file://$PROJECT_DIR$/front_end" />
+    <file type="web" url="file://$PROJECT_DIR$/mybatis_web" />
+    <file type="web" url="file://$PROJECT_DIR$/practice/mybatis_web" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc_02" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc_ssm" />
   </component>
@@ -16,15 +18,16 @@
         <option value="$PROJECT_DIR$/demo1/front_end/pom.xml" />
         <option value="$PROJECT_DIR$/../spring-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/../aop/pom.xml" />
-        <option value="$PROJECT_DIR$/springmvc_02/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_ssm/pom.xml" />
         <option value="$PROJECT_DIR$/spring_review/pom.xml" />
         <option value="$PROJECT_DIR$/practice/pom.xml" />
+        <option value="$PROJECT_DIR$/mybatis_web/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/front_end/spring-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/practice/mybatis_web/pom.xml" />
       </set>
     </option>
   </component>

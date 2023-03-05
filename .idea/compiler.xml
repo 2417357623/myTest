@@ -10,8 +10,8 @@
         <module name="spring_review" />
         <module name="practice" />
         <module name="springmvc_ssm" />
+        <module name="mybatis_web" />
         <module name="demo1" />
-        <module name="springmvc_02" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,10 +19,12 @@
       <module name="boot" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="front_end" target="1.8" />
+      <module name="mybatis" target="1.5" />
       <module name="spring-mybatis" target="1.5" />
       <module name="spring-mybatis (1) (com.example)" target="1.5" />
       <module name="springmvc" target="1.5" />
       <module name="springmvc_01" target="1.8" />
+      <module name="springmvc_02" target="1.5" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
