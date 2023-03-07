@@ -1,4 +1,6 @@
+import com.liyan.bank.dao.AccountDao;
 import com.liyan.bank.dao.PersonDao;
+import com.liyan.bank.pojo.Account;
 import com.liyan.bank.pojo.Person;
 import com.liyan.bank.utils.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -51,5 +53,14 @@ public class CrudTest {
         }
         System.out.println(p);
         sqlSession.commit();
+    }
+
+    @Test
+    public void paramTest(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        AccountDao mapper = sqlSession.getMapper(AccountDao.class);
+        Account act001 = mapper.selectByActnoAndId("act001", 1);
+        System.out.println(act001);
+
     }
 }

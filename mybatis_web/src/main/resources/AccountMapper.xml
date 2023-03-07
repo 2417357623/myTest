@@ -13,4 +13,11 @@
     <update id="updateByActno" >
         update t_account set balance = #{balance} where actno = #{actno}
     </update>
+
+    <select id="selectByActnoAndId" resultType="com.liyan.bank.pojo.Account">
+        select
+            id,actno,balance
+        from t_account
+            where actno = #{arg0} and id = #{arg1}
+    </select>
 </mapper>

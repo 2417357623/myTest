@@ -22,4 +22,6 @@ public interface AccountDao {
 
     int updateByActno(Account act);
 
+    Account selectByActnoAndId(String actno,int id);
+
 }

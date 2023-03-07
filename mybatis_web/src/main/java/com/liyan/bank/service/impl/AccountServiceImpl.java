@@ -1,7 +1,7 @@
 package com.liyan.bank.service.impl;
 
 import com.liyan.bank.dao.AccountDao;
-import com.liyan.bank.dao.impl.AccountDaoImpl;
+//import com.liyan.bank.dao.impl.AccountDaoImpl;
 import com.liyan.bank.exception.MoneyNotEnoughException;
 import com.liyan.bank.exception.TransferException;
 import com.liyan.bank.pojo.Account;
