@@ -14,9 +14,9 @@ import java.util.List;
  */
 public interface PersonDao {
     public void insert(Person person);
-    public void deleteById(int id);
+    public void deleteById(Integer id);
     public void update(Person person);
-    public Person selectById(int id);
+    public Person selectById(Integer id);
     public List<Person> selectAll();
 
     public List<Person> selectByMultiCondition(@Param("name") String name,@Param("homePosition")String homePosition,@Param("id")int id);
@@ -24,4 +24,8 @@ public interface PersonDao {
     public void updateBySet(Person person);
 
     public void deleteByIds(int[] ids);
+
+    public void insertBatch(@Param("persons") List<Person> persons);
+
+    public List<Person> selectAllByResultMap();
 }

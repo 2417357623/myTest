@@ -11,12 +11,12 @@ public class Person {
     private String name;
     private String homePosition;
 
-    private int id;
+    private Integer id;
 
     public Person() {
     }
 
-    public Person(int id,String name, String homePosition) {
+    public Person(Integer id,String name, String homePosition) {
         this.name = name;
         this.homePosition = homePosition;
         this.id = id;
@@ -38,11 +38,11 @@ public class Person {
         this.homePosition = homePosition;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

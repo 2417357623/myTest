@@ -31,5 +31,7 @@
     <mappers>
         <mapper resource="AccountMapper.xml"/>
         <mapper resource="PersonMapper.xml"/>
+        <mapper resource="StudentMapper.xml"/>
+        <mapper resource="ClazzMapper.xml"/>
     </mappers>
 </configuration>
