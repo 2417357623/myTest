@@ -1,4 +1,5 @@
 import com.liyan.bank.dao.PersonDao;
+import com.liyan.bank.dao.StudentDao;
 import com.liyan.bank.pojo.Person;
 import com.liyan.bank.utils.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -6,6 +7,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -51,5 +53,42 @@ public class CrudTest {
         }
         System.out.println(p);
         sqlSession.commit();
+    }
+
+    @Test
+    public void insertBatch(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        PersonDao mapper = sqlSession.getMapper(PersonDao.class);
+        List<Person> persons = new ArrayList<Person>();
+        Person person1 = new Person(null,"jj","cx");
+        Person person2 = new Person(null,"jj2", "cx");
+        persons.add(person1);
+        persons.add(person2);
+        mapper.insertBatch(persons);
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+    @Test
+    public void selectAllByResultMapTest(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        PersonDao mapper = sqlSession.getMapper(PersonDao.class);
+
+        List<Person> people = mapper.selectAllByResultMap();
+        for(Person person :people){
+            System.out.println(person);
+        }
+        sqlSession.commit();
+        sqlSession.close();
+    }
+
+
+    @Test
+    public void selectByIdTest(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        StudentDao mapper = sqlSession.getMapper(StudentDao.class);
+        mapper.selectById(1);
+        sqlSession.commit();
+        sqlSession.close();
     }
 }

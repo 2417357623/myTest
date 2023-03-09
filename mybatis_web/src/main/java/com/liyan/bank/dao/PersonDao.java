@@ -1,6 +1,7 @@
 package com.liyan.bank.dao;
 
 import com.liyan.bank.pojo.Person;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,8 +14,12 @@ import java.util.List;
  */
 public interface PersonDao {
     public void insert(Person person);
-    public void deleteById(int id);
+    public void deleteById(Integer id);
     public void update(Person person);
-    public Person selectById(int id);
+    public Person selectById(Integer id);
     public List<Person> selectAll();
+
+    public void insertBatch(@Param("persons") List<Person> persons);
+
+    public List<Person> selectAllByResultMap();
 }

@@ -3,6 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.liyan.bank.dao.PersonDao">
+
+    <resultMap id="personResultMap" type="com.liyan.bank.pojo.Person">
+        <result column="home_position" property="homePosition"/>
+    </resultMap>
+
     <insert id="insert">
         insert into t_person(id,name,home_position) values(#{id},#{name},#{homePosition})
     </insert>
@@ -24,6 +29,20 @@
             `name`,
             id,
             home_position as homePosition
+        from t_person
+    </select>
+
+    <insert id="insertBatch">
+        insert into t_person (id,name,home_position)values
+        <foreach collection="persons" item="person" separator=",">
+            <if test="person != null">
+               (null,#{person.name},#{person.homePosition})
+            </if>
+        </foreach>
+    </insert>
+
+    <select id="selectAllByResultMap" resultMap="personResultMap">
+        select *
         from t_person
     </select>
 
