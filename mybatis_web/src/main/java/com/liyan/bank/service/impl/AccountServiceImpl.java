@@ -19,7 +19,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
  */
 public class AccountServiceImpl implements AccountService {
 
-    private AccountDao accountDao = new AccountDaoImpl();
+//    private AccountDao accountDao = new AccountDaoImpl();
+    private AccountDao accountDao = MybatisUtil.openSession().getMapper(AccountDao.class);
 
     public void transfer(String fromActno, String toActno, double money) throws MoneyNotEnoughException, TransferException {
 
@@ -32,6 +33,7 @@ public class AccountServiceImpl implements AccountService {
 
         SqlSession sqlSession = MybatisUtil.openSession();
 
+        //mapper代理之后，实现了AccountDao接口，实现类里面封装了sqlSession.selectOne，所以这里是拿接口实现类的对象在调用查询方法
         Account fromAccount = accountDao.selectByActno(fromActno);
         Double fromAccountBalance = fromAccount.getBalance();
         if( money>fromAccountBalance){
@@ -44,8 +46,8 @@ public class AccountServiceImpl implements AccountService {
             toAccount.setBalance(toAccount.getBalance() + money);
             int count = accountDao.updateByActno(fromAccount);
 
-            String s = null;
-            s.toString();
+//            String s = null;
+//            s.toString();
 
             count += accountDao.updateByActno(toAccount);
             if(count != 2){
