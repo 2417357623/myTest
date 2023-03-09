@@ -18,7 +18,9 @@
       <module name="aop" target="1.5" />
       <module name="boot" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="flyway" target="1.8" />
       <module name="front_end" target="1.8" />
+      <module name="jdbc" target="1.5" />
       <module name="mybatis" target="1.5" />
       <module name="spring-mybatis" target="1.5" />
       <module name="spring-mybatis (1) (com.example)" target="1.5" />
