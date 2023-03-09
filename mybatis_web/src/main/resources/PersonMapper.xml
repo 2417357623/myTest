@@ -27,4 +27,40 @@
         from t_person
     </select>
 
+    <select id="selectByMultiCondition" resultType="com.liyan.bank.pojo.Person">
+        select
+        `name`,
+        id,
+        home_position as homePosition
+        from t_person where 1=1
+        <if test="name != null">
+            and name = #{name}
+        </if>
+        <if test=" homePosition != null">
+            and home_position = #{homePosition}
+        </if>
+        <if test=" id != null">
+            and id = #{id}
+        </if>
+    </select>
+
+    <update id="updateBySet">
+        update t_person
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test=" homePosition!= null">home_position = #{homePosition},</if>
+            <if test=" id!= null">id = #{id}</if>
+        </set>
+
+    </update>
+
+    <delete id="deleteByIds">
+        delete from t_person where id in(
+            <foreach collection="array" item="id" separator=",">
+                #{id}
+            </foreach>
+
+            )
+    </delete>
+
 </mapper>

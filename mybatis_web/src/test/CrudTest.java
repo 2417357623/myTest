@@ -25,7 +25,7 @@ public class CrudTest {
 
         SqlSession sqlSession = MybatisUtil.openSession();
         PersonDao mapper = sqlSession.getMapper(PersonDao.class);
-        mapper.insert(new Person(2,"liyan2","cahngxing"));
+        mapper.insert(new Person(3,"liyan2","cahngxing"));
         sqlSession.commit();
     }
 
@@ -62,5 +62,36 @@ public class CrudTest {
         Account act001 = mapper.selectByActnoAndId("act001", 1);
         System.out.println(act001);
 
+    }
+
+    @Test
+    public void selectByMultiConditionTest(){
+        PersonDao mapper = MybatisUtil.openSession().getMapper(PersonDao.class);
+        List<Person> people = mapper.selectByMultiCondition(null, null, 1);
+        System.out.println(people);
+    }
+
+    @Test
+    public void updateBySetTest(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        PersonDao mapper = sqlSession.getMapper(PersonDao.class);
+        mapper.updateBySet(new Person(1,"lili","cc"));
+        sqlSession.commit();
+    }
+
+    @Test
+    public void updateTest(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        PersonDao mapper = sqlSession.getMapper(PersonDao.class);
+        mapper.update(new Person(1,"lili","cc"));
+        sqlSession.commit();
+    }
+
+    @Test
+    public void deleteByIds(){
+        SqlSession sqlSession = MybatisUtil.openSession();
+        PersonDao mapper = sqlSession.getMapper(PersonDao.class);
+        mapper.deleteByIds(new int[]{1,2,3});
+        sqlSession.commit();
     }
 }

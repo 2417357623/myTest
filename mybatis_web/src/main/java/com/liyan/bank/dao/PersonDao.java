@@ -1,6 +1,7 @@
 package com.liyan.bank.dao;
 
 import com.liyan.bank.pojo.Person;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,10 @@ public interface PersonDao {
     public void update(Person person);
     public Person selectById(int id);
     public List<Person> selectAll();
+
+    public List<Person> selectByMultiCondition(@Param("name") String name,@Param("homePosition")String homePosition,@Param("id")int id);
+
+    public void updateBySet(Person person);
+
+    public void deleteByIds(int[] ids);
 }
