@@ -1,0 +1,34 @@
+h2{
+    color: rebeccapurple;
+}
+/*//字体样式*/
+.title1{
+    font-family: 宋体;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*一般会把这些font设置写在一起*/
+.title2{
+    font: bold  50px "宋体";
+}
+/*文本样式*/
+.text1{
+    text-align: center;
+    height:300px;
+    background: aqua;
+    line-height: 300px;
+    text-decoration: line-through;
+
+}
+.text1+p{
+    color: brown;
+    text-indent: 2em;
+}
+
+/*伪类*/
+.text1:hover{
+    background: brown;
+}
+
+/*列表样式*/

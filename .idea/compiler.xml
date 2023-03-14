@@ -12,6 +12,7 @@
         <module name="springmvc_ssm" />
         <module name="mybatis_web" />
         <module name="demo1" />
+        <module name="front_end" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,7 +20,6 @@
       <module name="boot" target="1.8" />
       <module name="demo" target="1.8" />
       <module name="flyway" target="1.8" />
-      <module name="front_end" target="1.8" />
       <module name="jdbc" target="1.5" />
       <module name="mybatis" target="1.5" />
       <module name="spring-mybatis" target="1.5" />
