@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #div1{
+            background-color: #071619;
+            width: 177px;
+            height: 124px;
+            margin: 0px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            height: 38px;
+            text-indent: 2em;
+        }
+        ul a{
+            text-decoration: none;
+            color: white;
+
+            line-height: 38px;
+        }
+        ul a:hover{
+            color: chocolate;
+        }
+
+        /*五彩导航*/
+        .nav a{
+            display: inline-block;
+            width:102px;
+            height: 102px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 102px;
+            background-image: url("../resources/早上-明媚.png");
+            color: white;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        .nav a:hover{
+            background-image: url("../resources/晚上-晴朗01.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div id="div1">
+    <ul>
+        <li><a href="#">手机</a>&nbsp<a href="#">电话卡</a></li>
+        <li><a href="#">电视</a>&nbsp<a href="#">电视</a></li>
+        <li><a href="#">美女</a>&nbsp<a href="#">美女</a></li>
+    </ul>
+</div>
+
+
+<div class="nav">
+    <a href="#">五彩导航</a>
+    <a href="#">五彩导航</a>
+    <a href="#">五彩导航</a>
+    <a href="#">五彩导航</a>
+    <a href="#">五彩导航</a>
+</div>
+</body>
+</html>

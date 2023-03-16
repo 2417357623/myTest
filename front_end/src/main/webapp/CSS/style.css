@@ -32,3 +32,104 @@ h2{
 }
 
 /*列表样式*/
+#u1{
+    background: black;
+}
+
+#u1 li{
+    background: aqua;
+    list-style: none;
+    text-indent: 1em;
+    background: red url("../../resources/Snipaste_2023-03-15_09-27-05.png") no-repeat 100px;
+    background-size: 10px 10px;
+}
+
+li a{
+    text-decoration: none;
+}
+
+li a:hover{
+    color: rebeccapurple;
+    font-weight: bold;
+}
+/*背景*/
+#div1{
+    width: 1000px;
+    height: 300px;
+    border: rebeccapurple;
+    background: red url("../../resources/Snipaste_2023-03-15_09-27-05.png") no-repeat 200px;
+    background-size: 10% 10%;
+}
+
+/*盒子模型*/
+
+/*外边距可以居中元素*/
+#box{
+    width: 260px;
+    border: 1px solid red;
+    margin: 30px auto;
+}
+form[action="#"]{
+    background: antiquewhite;
+}
+
+.inner:nth-of-type(1) input{
+    border: 2px solid red;
+    margin-bottom: 8px;
+}
+.inner:nth-of-type(2) input{
+    border: 2px solid black;
+    margin-bottom: 0px ;
+}
+
+div h2{
+    background: antiquewhite;
+    margin: 0px;
+    text-align: center;
+}
+
+/*元素显示模式 分为块元素和行内元素*/
+
+/*元素显示模式转化*/
+#a1{
+    width: 100px;
+    height: 100px;
+    background: red;
+    display: block;
+    text-align: center;
+    line-height: 100px;
+    text-decoration: none;
+}
+
+/*边框会影响盒子的大小，实际大小是不算边框的*/
+/*内边距是盒子和内容的距离 ,也会影响实际盒子大小，因为内容大小是固定的，这里width和height定义的
+是div_b内容大小，最终在页面上这个div_b是更大的，因为包括了内外边距和边框
+所以当我们要加边距边框的时候，为了最终显示的盒子大小不变，必须修改width和height*/
+#div_b{
+    width: 200px;
+    height: 200px;
+    border: 10px solid chartreuse;
+    padding: 50px;
+}
+
+#xin{
+    height: 40px;
+    border:1px solid red;
+    line-height: 40px;
+    font-size: 10px;
+}
+#xin a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    height: 40px;
+    padding: 0 20px;
+}
+
+#xin a:hover{
+    background: wheat;
+    color: chocolate;
+}
+
+/*行内元素水平居中给其父亲加text-align:center，块级盒子则是使用外边距
+ */
