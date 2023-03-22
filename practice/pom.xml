@@ -77,8 +77,12 @@
       <artifactId>fastjson</artifactId>
       <version>1.2.15</version>
     </dependency>
-
-
+      <dependency>
+          <groupId>io.codearte.jfairy</groupId>
+          <artifactId>jfairy</artifactId>
+          <version>0.5.9</version>
+          <scope>compile</scope>
+      </dependency>
 
 
   </dependencies>
