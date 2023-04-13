@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <option name="USE_RELEASE_OPTION" value="false" />
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -11,27 +12,15 @@
         <module name="practice" />
         <module name="springmvc_ssm" />
         <module name="mybatis_web" />
-        <module name="demo1" />
         <module name="front_end" />
+        <module name="alg" />
+        <module name="demo1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="aop" target="1.5" />
-      <module name="boot" target="1.8" />
-      <module name="demo" target="1.8" />
-      <module name="flyway" target="1.8" />
-      <module name="jdbc" target="1.5" />
-      <module name="mybatis" target="1.5" />
-      <module name="spring-mybatis" target="1.5" />
-      <module name="spring-mybatis (1) (com.example)" target="1.5" />
-      <module name="springmvc" target="1.5" />
-      <module name="springmvc_01" target="1.8" />
-      <module name="springmvc_02" target="1.5" />
-    </bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="boot" options="-parameters" />
       <module name="spring_review" options="-parameters" />
     </option>
   </component>

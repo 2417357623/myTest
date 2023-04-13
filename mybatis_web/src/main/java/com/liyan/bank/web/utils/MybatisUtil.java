@@ -1,4 +1,4 @@
-package com.liyan.bank.utils;
+package com.liyan.bank.web.utils;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;

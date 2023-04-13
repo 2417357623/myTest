@@ -3,12 +3,10 @@ import com.liyan.bank.dao.PersonDao;
 import com.liyan.bank.dao.StudentDao;
 import com.liyan.bank.pojo.Account;
 import com.liyan.bank.pojo.Person;
-import com.liyan.bank.utils.MybatisUtil;
+import com.liyan.bank.web.utils.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.junit.Test;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -133,4 +131,6 @@ public class CrudTest {
         mapper.deleteByIds(new int[]{1,2,3});
         sqlSession.commit();
     }
+
+
 }

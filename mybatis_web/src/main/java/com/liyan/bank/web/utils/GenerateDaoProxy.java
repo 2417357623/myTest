@@ -1,4 +1,4 @@
-package com.liyan.bank.utils;
+package com.liyan.bank.web.utils;
 
 /**
  * @ClassName GenerateDaoProxy

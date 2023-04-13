@@ -6,9 +6,8 @@ import com.liyan.bank.exception.MoneyNotEnoughException;
 import com.liyan.bank.exception.TransferException;
 import com.liyan.bank.pojo.Account;
 import com.liyan.bank.service.AccountService;
-import com.liyan.bank.utils.MybatisUtil;
+import com.liyan.bank.web.utils.MybatisUtil;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.ibatis.session.SqlSessionFactory;
 
 /**
  * @ClassName AccountServiceImpl
