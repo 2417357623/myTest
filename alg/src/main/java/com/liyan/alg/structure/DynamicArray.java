@@ -1,4 +1,4 @@
-package com.liyan.alg;
+package com.liyan.alg.structure;
 
 import java.util.Arrays;
 import java.util.function.Consumer;

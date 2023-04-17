@@ -1,4 +1,4 @@
-package com.liyan.alg;
+package com.liyan.alg.structure;
 
 import java.util.function.Consumer;
 
@@ -14,7 +14,7 @@ public class SinglyLinkedList {
     private Node head;
 
     public static class Node {
-        int value;
+        public int value;
         Node next;
 
         public Node(int value, Node next) {
@@ -50,6 +50,18 @@ public class SinglyLinkedList {
         }
     }
 
+    public void loop(){
+        recursion(head);
+    }
+
+    private void recursion(Node curr){
+        if(curr == null){
+            return;
+        }
+        System.out.println(curr.value);
+        curr = curr.next;
+        recursion(curr);
+    }
     public int get(int index){
         int i = 0;
         for (Node node = head; node != null; node = node.next,i++){
@@ -68,5 +80,7 @@ public class SinglyLinkedList {
             }
         }
     }
+
+
 }
 

@@ -1,8 +1,7 @@
 package com.liyan.alg;
 
+import com.liyan.alg.structure.DynamicArray;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class DynamicArrayTest {
     DynamicArray array = new DynamicArray();

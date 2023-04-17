@@ -1,8 +1,7 @@
 package com.liyan.alg;
 
+import com.liyan.alg.structure.SinglyLinkedList;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SinglyLinkedListTest {
 
@@ -42,4 +41,16 @@ public class SinglyLinkedListTest {
         singlyLinkedList.insert(2,133);
         singlyLinkedList.forEach(node -> System.out.println(node.value));
     }
+
+    @Test
+    public void loop() {
+        singlyLinkedList.addLast(1);
+        singlyLinkedList.addLast(2);
+        singlyLinkedList.addLast(3);
+        singlyLinkedList.addLast(4);
+        singlyLinkedList.insert(2,133);
+        singlyLinkedList.loop();
+    }
+
+
 }
