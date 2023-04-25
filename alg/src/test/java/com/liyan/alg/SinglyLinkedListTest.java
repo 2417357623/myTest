@@ -52,5 +52,8 @@ public class SinglyLinkedListTest {
         singlyLinkedList.loop();
     }
 
-
+    @Test
+    public void reverseList() {
+        singlyLinkedList.demo();
+    }
 }

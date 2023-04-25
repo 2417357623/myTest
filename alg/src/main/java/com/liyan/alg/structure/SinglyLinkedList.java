@@ -80,7 +80,46 @@ public class SinglyLinkedList {
             }
         }
     }
+    public class ListNode {
+        int val;
+        ListNode next;
 
+        ListNode() {
+        }
 
+        ListNode(int val) {
+            this.val = val;
+        }
+
+        public ListNode(int val, ListNode next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
+
+    public void demo(){
+        ListNode o5 = new  ListNode(5, null);
+        ListNode o4 = new  ListNode(4, o5);
+        ListNode o3 = new  ListNode(3, o4);
+        ListNode o2 = new  ListNode(2, o3);
+        ListNode o1 = new  ListNode(1, o2);
+        ListNode listNode = reverseList(o1);
+    }
+
+    public ListNode reverseList(ListNode head) {
+
+        if (head == null || head.next == null) {
+            /*
+                直到当前节点的下一个节点为空时返回当前节点
+                由于5没有下一个节点了，所以此处返回节点5
+             */
+            return head;
+        }
+        //递归传入下一个节点，目的是为了到达最后一个节点
+        ListNode newHead = reverseList(head.next);
+        head.next.next = head;
+        head.next = null;
+        return newHead;
+    }
 }
 
