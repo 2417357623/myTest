@@ -1,5 +1,11 @@
 package com.liyan.alg;
 
+import com.liyan.alg.structure.SinglyLinkedList;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.function.Consumer;
+
 /**
  * @ClassName Factorial
  * @Description TODO
@@ -11,7 +17,11 @@ package com.liyan.alg;
 public class Factorial {
 
     public static void main(String[] args) {
-        int demo = demo(6);
+        ArrayList<Integer> arrayList = new ArrayList<Integer>();
+        arrayList.add(3);
+        arrayList.add(2);
+        arrayList.add(1);
+        hanota(arrayList,new ArrayList<>(),new ArrayList<>());
     }
 
     public static int demo(int n) {
@@ -110,6 +120,29 @@ public class Factorial {
         low++;
         insertSort(a,low);
     }
+
+        public static void hanota(List<Integer> A, List<Integer> B, List<Integer> C) {
+            move(A.size(),A,B,C);
+        }
+        public static void move(int n, List<Integer> A, List<Integer> B, List<Integer> C){
+            if(n == 0){
+                return;
+            }
+            move(n-1,A,C,B);
+            System.out.println(A);
+            System.out.println(B);
+            System.out.println(C);
+            System.out.println("-----");
+            C.add(A.remove(A.size()-1));
+            move(n-1,B,A,C);
+        }
+
+        public static void foreach(List<Integer> list){
+            for (Integer num: list
+                 ) {
+                System.out.println(num);
+            }
+        }
 
 }
 
