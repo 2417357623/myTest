@@ -21,5 +21,13 @@ public class Fibonacci {
         result = fibo(num - 1) + fibo( num - 2);
         return result;
     }
+
+    //杨辉三角
+    private static int element(int i,int j){
+        if(i == j || j == 0){
+            return 1;
+        }
+        return element(i-1,j-1) + element(i-1,j);
+    }
 }
 
